@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ayaa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="shortcut icon" href="nisaasa.jpg" type="image/x-icon">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+    :root {
+      font-size: 15px;
+      /* Primary */
+      --var-soft-blue: hsl(215, 51%, 70%);
+      --var-cyan: hsl(178, 100%, 50%);
+      /* Neutral */
+      --var-main-darkest: hsl(217, 54%, 11%);
+      --var-card-dark: hsl(216, 50%, 16%);
+      --var-line-dark: hsl(215, 32%, 27%);
+      --var-lightest: white;
+      /* Fonts */
+      --var-heading: normal normal 600 1.5em/1.6em 'Outfit', sans-serif;
+      --var-small-heading: normal normal 400 1em/1em 'Outfit', sans-serif;
+      --var-para: normal normal 300 1em/1.55em 'Outfit', sans-serif;
+    }
+
+    body {
+      background-color: var(--var-main-darkest);
+      font-size: 1.7rem;
+    }
+
+    body h5 {
+      font-size: 3rem;
+      font: var(--var-heading);
+      color: var(--var-lightest);
+      padding: 1.2em 0;
+    }
+    body h6 {
+      font-size: 3rem;
+      font: var(--var-heading);
+      color: var(--var-lightest);
+      padding: 1.2em 0;
+    }
+
+    p {
+      font: var(--var-para);
+      color: var(--var-soft-blue);
+    }
+    object{
+    position: fixed;
+   
+    z-index: -1;
+    }
+
+    
+
+    .card-container {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      margin-top: 12rem;
+    }
+
+    button {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      max-width: 10%;
+    }
+
+    .card {
+      position: absolute;
+      width: 100%;
+      height: 80%;
+      background-color: var(--var-card-dark);
+      padding-right: 3rem;
+      padding-left: 3rem;
+      transition: transform 0.5s ease;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      
+    }
+
+    .card:not(:last-child) {
+      transform: translateY(40px);
+    }
+
+    .card.hide {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+
+    .close-btn {
+      align-self: center;
+      width: 40%;
+    }
+
+    audio::-webkit-media-controls-panel {
+      background-color: var(--var-soft-blue);
+      border-radius: 5px;
+      padding-left: 1.4rem;
+      padding-right: 3rem;
+      display: flex;
+      align-items: center;
+      backdrop-filter: blur(15px);
+    }
+
+    audio::-webkit-media-controls-play-button {
+      color: #fff;
+      border-radius: 50%;
+      font-size: 20px;
+      margin-top: 2px;
+    }
+
+    audio::-webkit-media-controls-current-time-display,
+    audio::-webkit-media-controls-time-remaining-display,
+    audio::-webkit-media-controls-seek-back-button,
+    audio::-webkit-media-controls-seek-forward-button {
+      color: #000000;
+      font-size: 14px;
+    }
+
+    .w3-spin {
+      border-radius: 100%;
+      width: 30%;
+      position: absolute;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        font-size: 16px;
+      }
+
+      img {
+        max-width: 70%;
+      }
+
+      .card-container {
+        margin-top: 5rem;
+      }
+
+      .card {
+        max-height: 100%;
+        padding-left: 4rem;
+      }
+
+      button {
+        max-width: 100%;
+      }
+
+      audio {
+        height: 2rem;
+        width: 100%;
+      }
+
+      .w3-spin {
+        width: 30%;
+      }
+    }
+
+    @keyframes balloon {
+      0% {
+        top: 100%;
+      }
+      100% {
+        top: -100%;
+      }
+    }
+
+    @keyframes moveUp {
+      0% {
+        transform: translateY(10rem);
+      }
+      100% {
+        transform: translateY(-100vh);
+      }
+    }
+
+    .card:nth-child(15) .balloon {
+      position: relative;
+      animation: balloon 5s linear forwards;
+    }
+
+    .card:nth-child(15) .balloon {
+      animation: moveUp 10s linear forwards;
+    }
+  </style>
+</head>
+<body>
+  <object data="as.svg" ></object>
+  <div class="container">
+    <div class="card-container">
+      <div class="card">
+        <h5 class="card-title">Dari Liya</h5>
+        <p class="card-text">happy birthday ayaaa !! semoga keinginannya ter kabulkan semoga apa pun hasilnya jadi yang terbaik </p>
+        <center>
+          <audio controls autoplay loop>
+            <source src="fearless.mp3" type="audio/mpeg">
+          </audio>
+          <br>
+        </center>
+        <button class="close-btn btn btn-secondary">next</button>
+      </div>
+      <div class="card">
+        <h5 class="card-title">kupon</h5>
+        <p class="card-text">eitss sebelum itu ada iklan dulu </p>
+        <p class="card-text">kalo lagu nya ga keluar sebaiknya refresh dulu yh trs click </p>
+       
+        <button class="close-btn btn btn-secondary">next</button>
+      </div>
+      <div class="card">
+        <h5 class="card-title">Lagu fav kamu apa ya?</h5>
+        <h6 class="card-title">plss kasi tauu🙏🙏</h6>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3sW3oSbzsfecv9XoUdGs7h?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <button class="close-btn btn btn-secondary">next</button>
+      </div>
+
+      <div class="card">
+        <h5 class="card-title">ini bukan ya? yang lagi di play?</h5>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/77sMIMlNaSURUAXq5coCxE?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
+        <button class="close-btn btn btn-secondary">next</button>
+      </div>
+      <div class="card">
+        <h5 class="card-title">kalo bukan pliss kasih tau di wa 😿😿😿
+        <button class="close-btn btn btn-secondary">next</button>
+      </div>
+
+
+      <div class="card" >
+        <h5 class="card-title">Ini dari azka yang keliatan banget dibikinin sama chat gpt😾</h5>
+        <p class="card-text">
+          "Selamat ulang tahun yang ke-17, Aryanti Raihana! 🎂🎉 Hari ini adalah hari istimewa untukmu, dan aku berharap semua harapan dan impianmu menjadi kenyataan. Teruslah bersinar seperti bintang yang selalu bersinar di langit malam. Semoga tahun ini penuh dengan kebahagiaan, cinta, dan sukses. Selamat merayakan hari spesial ini dengan sukacita dan tawa bersama teman dan keluarga. Semoga setiap langkah yang kamu ambil membawa keberuntungan dan kesuksesan. Selamat ulang tahun!" 🥳🌟 </p>
+        <button class="close-btn btn btn-secondary">next</button>
+      </div>
+      <div class="card">
+        <h5 class="card-title">Ini dari aldo yang keliatan ga niat banget😢</h5>
+        <p class="card-text">Happy Birthday arianti semoga semua impian dan cita cita sama jangan lupa buat pukulin aria tiap hari ya</p>
+        
+        <button class="close-btn btn btn-secondary">next</button>
+      </div>
+      <div class="card">
+         <h5 class="card-title">Kalo ini dari gua yahaha hayuu</h5>
+        <p class="card-text">hbd ayaa semoga bisa laravel, node.js, javascript, php, css, tailwind, C++, C#, flutter, reactJs, pokokna naon we lah yang penting bisa, semoga jadi orang yang lebih baik meskipun udh baik kalo bisa sih jadi boiboiboy eh sama keterima di univ favorit jugaa katanya kan kamu mau kuliah</p>
+        <button class="close-btn btn btn-secondary">next</button>
+      </div>
+       <div class="card">
+        <h5 class="card-title">Permintaan Maaf😢😢</h5>
+       <p class="card-text">Sorry yaa kalo disekolah banyak yang ceng" in kamu sorry ya kalo udah bikin risih😿</p>
+       <button class="close-btn btn btn-secondary">next</button>
+     </div>
+
+     <div class="card" style="padding-top: 2rem;">
+      <h5 class="card-title">Sebagai Permintaan Maaf gua buatin playlist yh</h5>
+     <p class="card-text"> <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6uUI4xL6oXiIlwOUSY6LIA?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+     <button class="close-btn btn btn-secondary">next</button>
+   </div>
+
+     <div class="card" style="padding-top: 2rem;">
+      <h5 class="card-title">Berikut ada alasan kenapa gua layak dimaafkan</h5>
+      <button class="close-btn btn btn-secondary">next</button>
+    </div>
+
+      <div class="card">
+        <h5 class="card-title">Kosong kan?</h5>
+        <p class="card-text">yap betul gua gausah dimaafin yahahahahahahaahahahahaahahaahahahahahahaahahahahahahaha</p>
+        <button class="close-btn btn btn-secondary">next</button>
+      </div>
+
+      <div class="card">
+        <h5 class="card-title">Udah ah capek besok sekolah udah disuruh bunda tidur</h5>
+        <p class="card-text">Sekali lagi semoga menjadi apa ya menjadi jadi pokoknya harus membanggakan papah dad 아버지 父親 أب mamah bunda Mother  mom 어머니 お母さん kakek nenek adek kakak pokoknya harus membanggakan keluarga biar apa? btul biar kren</p>
+        
+        <button class="close-btn btn btn-secondary">next</button>
+      </div>
+
+      <div class="card">
+        <h5 class="card-title">warning</h5>
+        <p class="card-text">ss ya kalo udah mau liat di hp kamu tampilannya kaya gimana</p>
+        <p class="card-text">kalo gaje ketik "biasa aja" di whatsApp</p>
+        <p class="card-text">kalo keren ketik "wow" di whatsApp</p>
+        <p class="card-text">kalo keren parah gila gokil yahaha hayuu ketik "gajelas lu sok asik prik apasih" di whatsApp</p>
+       
+      </div>
+    </div>
+  </div>
+  <script>
+    var cards = document.querySelectorAll('.card');
+
+    cards.forEach(function (card, index) {
+      if (index > 0) {
+        card.classList.add('hide');
+      }
+    });
+
+    cards.forEach(function (card, index) {
+      var closeButton = card.querySelector('.close-btn');
+      closeButton.addEventListener('click', function () {
+        if (index < cards.length - 1) {
+          card.classList.add('hide');
+          cards[index + 1].classList.remove('hide');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

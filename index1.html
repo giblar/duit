@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+   
+    <title>hbd</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:ital@1&family=Source+Code+Pro:ital,wght@1,300;1,600&display=swap');
+        :root {
+      font-size: 15px;
+      /* Primary */
+      --var-soft-blue: hsl(215, 51%, 70%);
+      --var-cyan: hsl(178, 100%, 50%);
+      /* Neutral */
+      --var-main-darkest: hsl(217, 54%, 11%);
+      --var-card-dark: hsl(216, 50%, 16%);
+      --var-line-dark: hsl(215, 32%, 27%);
+      --var-lightest: white;
+      /* Fonts */
+      --var-heading: normal normal 600 1.5em/1.6em 'Outfit', sans-serif;
+      --var-small-heading: normal normal 400 1em/1em 'Outfit', sans-serif;
+      --var-para: normal normal 300 1em/1.55em 'Outfit', sans-serif;
+    }
+
+        body {
+            font-size: 20px;
+            background-color: var(--var-card-dark);
+            overflow: visible;
+        }
+
+        .card {
+            top: 10rem;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+            background-color: var(--var-card-dark);
+            max-width: 28rem;
+            margin: 0 auto;
+            border: none;
+            color: var(--var-soft-blue);
+            overflow: visible;
+        }
+
+        button {
+            margin-top: 2.4rem;
+        }
+
+        .balloon-img {
+            position: relative;
+            animation: floatUp 14s linear forwards;
+            overflow: visible;
+        }
+
+        @keyframes floatUp {
+            0% { top: 0; }
+            100% { top: -400rem; }
+            
+        }
+
+        @media (max-width: 576px) {
+            .card {
+                padding: 2rem;
+                max-width: 100%;
+                justify-content: center;
+            }
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="card" style="width: 100%;  ">
+        <div class="card-body">
+            <h5 class="card-title">happy birthday yaa</h5>
+            <p class="card-text">happy sweet seventeen, udh 17 tahun aja nih ga kerasa yaaa? bentar lagi punya KTP jugaaa, aku tau mungkin ga mudah untuk kamu sampai dititik inii tapi percayaaalah kamu udh hebat bisa sampai si titik ini, I hope your happy in this birthday and everything is pleasant for u
+                .</p>
+            <p class="card-text">click button ituu yaa ada ucapan dari temen temen akuu</p>
+           
+             
+            <center>
+               
+                <br>
+                <button onclick="redirectToIndex2()" class="btn btn-primary">click me!</button>
+                <script>
+                    function redirectToIndex2() {
+                        window.location.href = "index2.html";
+                    }
+                </script>
+            </center>
+            <img id="balloon-img" class="balloon-img" src="balloon.png" alt="Balon" style="display: none;">
+            <img id="balloons-img" class="balloon-img" src="balloons.png" alt="Balon" style="display: none;">
+            <img id="bal-img" class="balloon-img" src="bal.png" alt="Balon" style="display: none;">
+            <img id="ball-img" class="balloon-img" src="ball.png" alt="Balon" style="display: none;">
+        </div>
+    </div>
+
+    <script>
+        function floatBalloon() {
+            var balloonImg = document.getElementById("balloon-img");
+            var balloonsImg = document.getElementById("balloons-img");
+            var balImg = document.getElementById("bal-img");
+            var ballImg = document.getElementById("ball-img");
+            balloonImg.style.display = "block";
+            balloonsImg.style.display = "block";
+            balImg.style.display = "block";
+            ballImg.style.display = "block";
+            balloonImg.style.animationFillMode = "forwards";
+            ballImg.style.animationFillMode = "forwards";
+            balloonsImg.style.animationFillMode = "forwards";
+            balImg.style.animationFillMode = "forwards";
+        }
+
+        setInterval(floatBalloon, 0.6);
+    </script>
+</body>
+</html>
